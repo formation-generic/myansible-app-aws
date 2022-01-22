@@ -2,6 +2,8 @@
 - hosts: webservers 
   become: True
   tasks:
+    - name: update target machine
+      command: apt-get update
     - name: Install apache2
       apt:
         name: apache2
