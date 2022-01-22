@@ -2,12 +2,14 @@
 - hosts: webservers 
   become: True
   tasks:
-    - name: update target machine
-      command: apt-get update
+    # Inutile car update_cache exécute apt-get update automatiquement
+    #- name: update target machine
+    #  command: apt-get update
     - name: Install apache2
       apt:
         name: apache2
         state: latest
+        update_cache: yes
     - name: Start Apache server
       service:
         name: apache2
