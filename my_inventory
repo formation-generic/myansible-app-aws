@@ -1,4 +1,4 @@
-web ansible_ssh_host=35.180.123.109 ansible_user=ubuntu
+web ansible_ssh_host=52.47.137.15 ansible_user=ubuntu
 
 
 [webservers]
